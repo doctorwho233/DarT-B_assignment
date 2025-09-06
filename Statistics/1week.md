@@ -45,14 +45,16 @@
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
 "누구나 데이터를 다루는 시대, 데이터를 효과적으로 다루고자 한다면 언제나 통계학적 사고가 필요하다."<br>
 "통계학을 알면 확연히 인사이트가 달라진다." <br>
-<img width="570" height="109" alt="image" src="https://github.com/user-attachments/assets/a4b82227-e34c-4beb-9ded-d704d667da33" /> <br>
+<img width="463" height="83" alt="image" src="https://github.com/user-attachments/assets/9e0004b6-1e00-4642-b6c5-9efd76ceedb5" />
+ <br>
 ↑ 위와같은 방식으로 데이터 분석이 이루어짐 <br> <br>
 
 **머신러닝과 전통적 통계학의 차이** <br><br>
 
 머신러닝 : 예측 -> 과적합 해결에 집중<br>
 통계학 : 해석 -> 신뢰도 중시, 단순성 추구
-<img width="634" height="250" alt="image" src="https://github.com/user-attachments/assets/20332fd2-e1f5-4f72-8f36-e68fa5819d3a" />
+<img width="636" height="252" alt="image" src="https://github.com/user-attachments/assets/ab0acc8c-f412-4b1e-b9ab-5370ceca2f08" />
+
 
 **기술 통계와 추론통계** <br><br>
 
@@ -79,7 +81,8 @@
 올바른 표본 추출은 중요함. <- 모수를 반영할 수 있도록 편향되지 않도록 <br>
 <br>
 **"최종 분석에는 전체 데이터를 사용하더라도, 분석 모델이 완성될 때까지는 표본 데이터를 활용하는 것이 경제적, 시간적으로 유리하다."** <br><br>
-<img width="583" height="274" alt="image" src="https://github.com/user-attachments/assets/3de0fae9-5925-466b-a9c8-6195b88bb287" />  <br><br>
+<img width="550" height="273" alt="image" src="https://github.com/user-attachments/assets/aeb4a7d9-167c-4130-ac27-b6b5bdcea962" />
+  <br><br>
 
 **표본 추출에서 나타나는 편향의 종류**
 <br>
@@ -87,7 +90,8 @@
 비표본 오차 : 표본 오차를 제외한 변동 <br>
 편향 : 표본에서 나타나는 모집단과의 체계적인 차이. -> 확률화를 통해 최소화하거나 없앨 수 있음.
 <br>
-<img width="648" height="440" alt="image" src="https://github.com/user-attachments/assets/ebfd11be-fece-49f0-8f03-1d6c2b77349b" /> 
+<img width="477" height="207" alt="image" src="https://github.com/user-attachments/assets/3df64845-95d6-4609-b690-a7f2b7e2a725" />
+
 <br>
 **인지적 편향의 종류**
 <br>
@@ -98,7 +102,8 @@
 생존자 편향 : 소수의 성공한 사례를 일반화된 것으로 인식함으로써 나타나는 편향<br><br>
 
 분산: 데이터 포인트에 대한 모델 예측의 가변성 -편향과 분산은 트레이드오프관계<br>
-<img width="358" height="261" alt="image" src="https://github.com/user-attachments/assets/c6f105fc-a9f8-48cb-a039-dcd77fb8714c" /> <br>
+<img width="364" height="255" alt="image" src="https://github.com/user-attachments/assets/283b4461-194d-4819-a0a9-5c4bc94c6c4f" />
+ <br>
 
 표본 추출법 <br>
 단순 임의 추출법 : 랜덤 <br>
@@ -116,7 +121,8 @@
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
 
 독립변수 - 종속변수 = 원인 - 결과 = 흡연 - 폐암 <br>
-<img width="565" height="231" alt="image" src="https://github.com/user-attachments/assets/ad4c9e2d-975f-44c7-ab7f-3bc2dc9dbb20" />
+<img width="430" height="199" alt="image" src="https://github.com/user-attachments/assets/17bacd73-1831-40fd-8f47-30bdb5fb0fae" />
+
 <br>
 **상관관계가 없어야함 !!** <br>
 
@@ -130,14 +136,16 @@
 매개관계 : 독립변수와 종속변수의 중간에서 매개변수가 개입되어 독립변수의 영향을 종속변수에 전달하는 관계 <br><br>
 
 **척도의 종류**<br>
-<img width="604" height="161" alt="image" src="https://github.com/user-attachments/assets/21e881df-b9f5-41ff-a873-7258b3bb25d4" /> <br>
+<img width="529" height="145" alt="image" src="https://github.com/user-attachments/assets/cdafcb6a-958a-47fb-a6cf-671b4f4a3276" />
+ <br>
 
 명목척도 : 조사대상의 속성이나 범주를 구분하기 위한 목적으로 만들어진 척도.<br>
 서열척도 : 대상 간의 순서관계를 측정<br>
 등간척도 : 조사 대상이 가지고 있는 속상의 '상대적 크기'의 차이를 비교할수 있는 정보<br>
 비율척도 : 절대적 기준을 통한 비율정보까지 포함. <br>
 
-<img width="638" height="173" alt="image" src="https://github.com/user-attachments/assets/0e63eb24-dae5-4af1-90bc-db40be7f963a" />
+<img width="636" height="165" alt="image" src="https://github.com/user-attachments/assets/f46b0c72-8425-4953-8905-846eb251819c" />
+
 
 
 ## 04. 데이터의 기술 통계적 측정
@@ -155,17 +163,23 @@
  분산  : 데이터의 퍼진 정도를 나타내는 값<br>
  표준편차 : 분산에 제곱근을 해준 값<br>
  사분위수 : 전체 데이터의 순서에 따른 값의 위치 값<br>
-<img width="396" height="148" alt="image" src="https://github.com/user-attachments/assets/51a483db-d76d-480f-99ef-6a2b2c514424" /> <br>
+<img width="377" height="155" alt="image" src="https://github.com/user-attachments/assets/524da9be-cc20-4345-9fa8-871149098b35" />
+ <br>
 변동 계수 : 표준 편차를 산술 평균으로 나눈 값 - 다른 두 자료의 산포도 비교 가능
 <br>
 왜도 : 데이터 분포의 좌우 비대칭도를 표현하는 척도.  <br>
-<img width="561" height="213" alt="image" src="https://github.com/user-attachments/assets/2a1de24d-b341-49ac-b906-1950d3ffb881" /> <br>
-<img width="228" height="48" alt="image" src="https://github.com/user-attachments/assets/5c47e85d-3b60-4c2c-b931-c1c0528c7c89" /> <br><br>
+<img width="527" height="197" alt="image" src="https://github.com/user-attachments/assets/e3a4ef03-ba37-4422-9ad4-948d4358a36b" />
+ <br>
+<img width="231" height="55" alt="image" src="https://github.com/user-attachments/assets/61b14954-918d-4426-ac1c-c923f91677ac" />
+ <br><br>
 첨도 : 분포가 정규분포보다 얼마나 뾰족하거나 완만한지의 정도를 나타내는 척도. <br>
-<img width="310" height="160" alt="image" src="https://github.com/user-attachments/assets/0cb411a5-1a0c-494b-80bb-9ab1794f29da" /><br>
-<img width="291" height="102" alt="image" src="https://github.com/user-attachments/assets/8c7062a4-7555-45f3-b610-c6a5a2aa438b" /><br>
+<img width="317" height="185" alt="image" src="https://github.com/user-attachments/assets/7173c62d-3af0-4974-8144-4dfcc850659d" />
+<br>
+<img width="302" height="86" alt="image" src="https://github.com/user-attachments/assets/409114c8-11cc-4154-ba6c-f39c0ade4a14" />
+<br>
 즉, 정규분포의 왜도와 첨도는 0 이다.<br>
-<img width="367" height="255" alt="image" src="https://github.com/user-attachments/assets/97876305-6be3-4bd4-affb-76c8e2da514d" />
+<img width="365" height="245" alt="image" src="https://github.com/user-attachments/assets/3fbc4e88-3a09-4469-a151-f40daccc4c9e" />
+
 
 
 <br>
