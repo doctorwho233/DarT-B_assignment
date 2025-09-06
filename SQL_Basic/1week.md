@@ -92,7 +92,8 @@ Task -> Target              (문제정의) <br>
 데이터 어떻게 저장됨? 어떤 데이터가 저장됨? 칼럼의 의미는 뭐임?  -> 이것들에 대해 항상 생각<br>
 
 ERD(Entity Relationship Diagram)<br>
-<img width="867" height="291" alt="image" src="https://github.com/user-attachments/assets/4c32cef1-4ea7-4f42-926d-dced532dfcbb" />
+<img width="1349" height="472" alt="image" src="https://github.com/user-attachments/assets/c6eea077-90cf-4e83-971a-8f7897744fcf" />
+
 각각은 테이블임.
 Order 에서 Customer id, Product id 를 사용하는구나~ 여러가지 데이터를 활용<br>
 
@@ -118,7 +119,8 @@ ERD 없으면 모든 데이터 베이스 직접 보면서 탐색 (위의 질문�
 
 <br>
 <br>
-<img width="1920" height="1034" alt="image" src="https://github.com/user-attachments/assets/35783759-1cc4-4424-92d6-618016689ab6" />
+<img width="1913" height="1037" alt="image" src="https://github.com/user-attachments/assets/3a162212-da08-424f-9cc4-d44145867a6f" />
+
 ---
 
 # 3️⃣ 확인문제
