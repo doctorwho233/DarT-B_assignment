@@ -1,4 +1,4 @@
-<img width="947" height="537" alt="image" src="https://github.com/user-attachments/assets/e4799caa-ae7f-4845-9db3-3c7788848ddd" /><img width="947" height="537" alt="image" src="https://github.com/user-attachments/assets/55eeed63-ea88-4f55-855d-8a6f1c5af0d6" /># SQL_BASIC 2주차 정규 과제 
+# SQL_BASIC 2주차 정규 과제 
 
 📌SQL_BASIC 정규과제는 매주 정해진 분량의 `초보자를 위한 BigQuery(SQL) 입문` 강의를 듣고 간단한 문제를 풀면서 학습하는 것입니다. 이번주는 아래의 **SQL_Basic_2nd_TIL**에 나열된 분량을 수강하고 `학습 목표`에 맞게 공부하시면 됩니다.
 
