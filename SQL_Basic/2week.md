@@ -47,6 +47,20 @@
 ~~~
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
+**SELECT** <br>
+기본 문법 <br><br>
+SELECT : 어떤 컬럼 선택할지 <br>
+  Col1 AS new_name, (따옴표 없이 실행) <br>
+  Col2, <br>
+  Col3 <br>
+FROM Dataset.Table : 어떤 테이블에서 데이터 확인할지(프로젝트 id/dataset/table) <br>
+WHERE : 조건 <br>
+  Col1 = 1 : 조건문 <br><br>
+
+* EXCEPT(제외할 컬럼) <br>
+테이블 간 교집합 부분은 JOIN 활용 <br>
+
+<img width="844" height="366" alt="image" src="https://github.com/user-attachments/assets/15aa579f-4c0a-4072-92fb-d4c357e8ffe3" />
 
 
 ## 2-5. 집계 (Group By / HAVING / SUM,COUNT)
