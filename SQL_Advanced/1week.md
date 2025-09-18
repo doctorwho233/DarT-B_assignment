@@ -228,6 +228,7 @@ https://school.programmers.co.kr/learn/courses/30/lessons/131115
 <img width="1915" height="955" alt="image" src="https://github.com/user-attachments/assets/558fffdc-18e6-4bdc-b18b-10bec7b400e8" />
 
 
+<img width="1920" height="997" alt="image" src="https://github.com/user-attachments/assets/e43644a4-0bbe-48a8-a93f-0635ff9042d9" />
 
 
 ---
@@ -253,7 +254,58 @@ GROUP BY customer_id;
 
 
 ~~~
-여기에 답을 작성해주세요!
+SELECT customer_id, COUNT(*) AS recent_order_count
+FROM (
+  SELECT *
+  FROM Orders
+  WHERE order_date >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)
+) AS RecentOrders
+GROUP BY customer_id;
+
+## CTE (WITH) 와 서브쿼리의 차이점
+
+- **위치와 표현 방식**
+  - CTE는 쿼리 상단에 `WITH ... AS (...)` 형태로 정의하고, 이후 본문에서 이름을 참조한다.
+  - 서브쿼리는 `FROM` 절이나 `WHERE` 절 등 쿼리 내부에 직접 작성한다.
+
+- **재사용 가능 여부**
+  - CTE는 한 번 정의한 뒤 같은 쿼리 안에서 여러 번 재사용할 수 있다.
+  - 서브쿼리는 재사용이 불가능하며, 동일한 로직을 쓰려면 반복해서 적어야 한다.
+
+- **가독성**
+  - CTE는 로직을 단계별로 분리할 수 있어 복잡한 쿼리일수록 읽기 쉽다.
+  - 서브쿼리는 중첩이 많아질수록 읽기 어렵다.
+
+- **성능 처리 방식**
+  - CTE는 DBMS에 따라 중간 결과를 임시 테이블처럼 만들어 성능이 떨어질 수 있다.
+  - 서브쿼리는 옵티마이저가 인라인 뷰로 합쳐 최적화할 때 성능상 유리할 수 있다.
+
+---
+
+## CTE의 장단점
+
+- 장점
+  - 복잡한 쿼리를 단계별로 나눌 수 있어 이해하기 쉽다.
+  - 한 번 정의하면 여러 곳에서 재사용할 수 있다.
+  - 디버깅 시 각 CTE를 따로 실행해 확인하기 좋다.
+
+- 단점
+  - 일부 DBMS에서는 항상 물리적 결과를 생성하여 성능 저하가 발생할 수 있다.
+  - 단순한 쿼리에서는 오히려 불필요하게 길어진다.
+
+---
+
+## 서브쿼리의 장단점
+
+- 장점
+  - 간단한 로직일 경우 짧고 직관적으로 표현할 수 있다.
+  - 최적화 엔진이 인라인 처리하여 성능상 이점이 있을 수 있다.
+
+- 단점
+  - 같은 로직을 여러 번 쓰면 반복 작성해야 한다.
+  - 쿼리가 복잡해질수록 가독성이 떨어진다.
+  - 부분 실행이나 디버깅이 어렵다.
+
 ~~~
 
 
