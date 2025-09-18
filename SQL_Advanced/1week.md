@@ -225,7 +225,8 @@ https://school.programmers.co.kr/learn/courses/30/lessons/131115
 
 ## 문제 인증란
 
-<!-- 이 주석을 지우고 여기에 문제 푼 인증사진을 올려주세요. -->
+<img width="1915" height="955" alt="image" src="https://github.com/user-attachments/assets/558fffdc-18e6-4bdc-b18b-10bec7b400e8" />
+
 
 
 
