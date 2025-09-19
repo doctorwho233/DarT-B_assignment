@@ -1,4 +1,4 @@
-# 통계학 3주차 정규과제
+<img width="442" height="163" alt="image" src="https://github.com/user-attachments/assets/f3981fc5-a1c2-46db-85e2-0605fd31edde" /># 통계학 3주차 정규과제
 
 📌통계학 정규과제는 매주 정해진 분량의 『*데이터 분석가가 반드시 알아야 할 모든 것*』 을 읽고 학습하는 것입니다. 이번 주는 아래의 **Statistics_3rd_TIL**에 나열된 분량을 읽고 `학습 목표`에 맞게 공부하시면 됩니다.
 
@@ -44,6 +44,26 @@
 * 외부 데이터를 수집하는 방법에 대해 인식한다.
 ```
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
+<img width="357" height="223" alt="image" src="https://github.com/user-attachments/assets/a8b2f2cc-b39d-47df-b8c0-511070934532" />
+설계 : 목적설정 및 자원확보 <br>
+분석 및 모델링 : 서버 마련 및 분석/모델링 <br>
+구축 및 활용 : 모델 업무적용 및 성과 측정 <br>
+
+<br><br>
+
+비지니스 이해 및 문제 정의가 조금이라도 잘못되면 최종 인사이트 도출 및 솔루션 적용 단계에서 제대로된 효과 보기 힘들다.<br>
+->
+MECE <img width="442" height="163" alt="image" src="https://github.com/user-attachments/assets/9ea40cc5-4a35-48c3-86e1-b08e1f8d0d75" />
+비지니스 문제 정의에서 본질적인 문제가 명시되지 않으면 분석 프로젝트는 본질적인 문제를 해결할 수 없게 될 위험이 높아진다.<br>
+프로세스 분석 과제 도출 -> 우선순위 측정<br><br><br>
+
+다수의 경로에서 다양한 데이터를 한꺼번에 수집후 머신러닝 모델이나 분석 목적에 맞도록 통합/ 가공 후 활용
+<img width="454" height="205" alt="image" src="https://github.com/user-attachments/assets/4b0a45e5-31c0-4d63-8cb3-ca5c274352f2" />
+<br>
+1. 데이터 판매 기업으로부터 구매 혹은 MOU
+2. 공공 오픈 데이터 제공 사이트
+3. 웹 데이터 크롤링
+
 
 
 
@@ -57,7 +77,20 @@
 ```
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
+OLTP -> DW -> DM -> OLAP
+<img width="427" height="207" alt="image" src="https://github.com/user-attachments/assets/2bb492ed-8ab5-4dda-8868-eab969ede960" />
+OLTP : 실시간 데이터 수집 분류 저장 시스템 <br>
+DW : 데이터를 저장해 놓은 통합 데이터베이스 <br>
+DM : 가공된 일부 데이터 저장되는 곳 <br><br>
 
+조인 : 2개 이상의 테이블을 공통의 칼럼을 중심으로 결합하는 것
+<img width="430" height="148" alt="image" src="https://github.com/user-attachments/assets/7d4a05be-7361-4054-96a9-bf333f487f36" />
+<img width="447" height="140" alt="image" src="https://github.com/user-attachments/assets/26608b8f-5e63-4694-93fc-3d273ebb4941" />
+ERD : 각 테이블의 구성 정보와 테이블 간 관계를 도식으로 표현한 그림 형태<img width="265" height="245" alt="image" src="https://github.com/user-attachments/assets/4d7a51ad-39b3-4e64-916d-c0c5e5706cd9" />
+<br>
+물리: 효율적이고 결점X <br>
+논리: 매핑에 오류 없고 정규화 굿
+<img width="487" height="121" alt="image" src="https://github.com/user-attachments/assets/f3aed472-0c47-4e80-b82b-b161f8469e92" />
 
 <br>
 <br>
@@ -111,7 +144,7 @@
 | 1009       | 노동희     | 차장    | 10         | 인사팀     | 서울         |
 
 ```
-여기에 답을 작성해주세요!
+LEFT
 ```
 
 
@@ -130,7 +163,7 @@
 | 1009       | 노동희     | 차장    | 10         | 인사팀     | 서울         |
 
 ```
-여기에 답을 작성해주세요!
+INNER
 ```
 
 
@@ -150,7 +183,7 @@
 |            |            |         | 50         | 법무팀     | 인천         |
 
 ```
-여기에 답을 작성해주세요!
+RIGHT
 ```
 
 
