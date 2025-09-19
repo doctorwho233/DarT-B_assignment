@@ -62,6 +62,14 @@
 ~~~
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
+<img width="779" height="179" alt="image" src="https://github.com/user-attachments/assets/66afc778-8f89-4200-8ad6-81f9802d9f00" />
+~~~sql
+SELECT
+  COUNT(id) AS cnt
+FROM basic.poketmon
+WHERE
+  (type2 IS NULL)
+~~~
 
 
 
