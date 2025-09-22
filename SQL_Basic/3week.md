@@ -154,8 +154,12 @@ WHERE
 ~~~
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/02975c80-b8d9-4ca1-9938-62cff6704224" />
+조건(필터링) - WHERE : 어떤 조건으로 볼까? <br>
+추출 - SELECT : 뭐 볼까? <br>
+FROM : 어디서 볼까? <br>
+요약 - GROUP BY : 어떻게 나눠서 볼까? <br>
 
-![alt text](image-11.png)
 
 ## 3-2. 쿼리를 작성하는 흐름
 
@@ -165,7 +169,14 @@ WHERE
 ~~~
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
-
+지표고민 - 목적 <br>
+지표 구체화 - 정의 <br>
+지표 탐색 - 히스토리 <br>
+쿼리 작성 - 히스토리 없을 때 -1개(활용)<br>
+                            -2개(연결방법 JOIN)<br>
+데이터 정합성 확인 - 결과확인<br>
+쿼리 가독성 - 나중을 위해서<br>
+쿼리 저장 - 문서로 저장
 
 
 ## 3-3. 쿼리 작성 템플릿과 생산성 도구
@@ -176,7 +187,7 @@ WHERE
 ~~~
 
 <!-- 이어질 주차에서 생산성 도구를 활용한 실습이 있습니다.강의에 맞게 제작하여 화면을 캡쳐하여 이 주석을 지우고 올려주세요. -->
-
+이 부분은 문제가 있어서 우선은 안해도 된다고 하셔서 따로 정리는 하지 않았습니다.
 
 
 <br>
@@ -186,8 +197,8 @@ WHERE
 
 # 2️⃣ 학습 인증란
 
-<!-- 이 글을 지우고, 여기에 학습한 것을 인증해주세요.-->
-
+<<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8b17aab5-287e-468d-9486-bdd7e5c0bb0a" />
+>
 
 
 <br><br>
@@ -223,7 +234,16 @@ ORDER BY (ㄱ) (ㄷ);
 
 
 ~~~
-여기에 답을 작성해주세요!
+SELECT type1, COUNT(*)
+FROM pokemon
+GROUP BY type1
+ORDER BY COUNT(*) DESC;
+
+ㄱ : COUNT(*)
+
+ㄴ : GROUP BY
+
+ㄷ : DESC
 ~~~
 
 
