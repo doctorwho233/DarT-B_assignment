@@ -62,7 +62,8 @@
 ~~~
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
-<img width="779" height="179" alt="image" src="https://github.com/user-attachments/assets/66afc778-8f89-4200-8ad6-81f9802d9f00" />
+### 문제 1  
+![alt text](image-4.png)
 
 ~~~ sql
 SELECT
@@ -71,6 +72,82 @@ FROM basic.poketmon
 WHERE
   (type2 IS NULL)
 ~~~
+### 문제 2
+![alt text](image-5.png)
+~~~ sql
+SELECT
+  type1,
+    COUNT(id) AS pokemon_cnt
+FROM
+  basic.poketmon
+WHERE
+  type2 IS NULL
+GROUP BY
+  type1
+ORDER BY
+  pokemon_cnt DESC
+  ~~~
+### 문제 3
+![alt text](image-6.png)
+~~~ sql
+SELECT
+    type1,
+        COUNT(id) AS pokemon_cnt
+FROM
+    basic.poketmon
+GrOUP BY
+    type1
+~~~
+### 문제 4
+![alt text](image-7.png)
+~~~ sql
+SELECT
+    is_legendary,
+        COUNT(id) AS pokemon_cnt
+FrOM
+    basic.poketmon
+GROUP BY
+    is_legendary
+~~~
+### 문제 5
+![alt text](image-8.png)
+~~~ sql
+SELECT
+    name,
+    COUNT(name) AS cnt
+FROM
+    basic.poketmon
+group by
+    name
+HAVING
+    cnt > 1
+~~~
+### 문제 6
+![alt text](image-9.png)
+~~~ sql
+SELECT
+    *
+FROM
+    basic.trainer
+WHERE
+    name = 'iris'
+~~~
+### 문제 7
+![alt text](image-10.png)
+
+~~~ sql
+SELECT
+    *
+FROM
+    basic.trainer
+WHERE
+    name = 'iris'
+    OR name = 'Whitney'
+    OR name = 'Cynthia'
+~~~
+
+
+
 ✅ 학습 목표 :
 * SQL 쿼리 구조를 이해할 수 있다. 
 * SELECT, FROM, WHERE을 활용하는 방법을 설명할 수 있다. 
@@ -78,7 +155,7 @@ WHERE
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
 
-
+![alt text](image-11.png)
 
 ## 3-2. 쿼리를 작성하는 흐름
 
