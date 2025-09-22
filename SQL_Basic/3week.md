@@ -63,7 +63,8 @@
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
 ### 문제 1  
-![alt text](image-4.png)
+<img width="787" height="188" alt="image" src="https://github.com/user-attachments/assets/82386e7a-3cb3-44b2-a6c4-462dbd304c37" />
+
 
 ~~~ sql
 SELECT
@@ -73,7 +74,8 @@ WHERE
   (type2 IS NULL)
 ~~~
 ### 문제 2
-![alt text](image-5.png)
+<img width="910" height="176" alt="image" src="https://github.com/user-attachments/assets/a6510e20-694b-4110-9735-1b1c47089156" />
+
 ~~~ sql
 SELECT
   type1,
@@ -88,7 +90,8 @@ ORDER BY
   pokemon_cnt DESC
   ~~~
 ### 문제 3
-![alt text](image-6.png)
+<img width="819" height="133" alt="image" src="https://github.com/user-attachments/assets/4563ba69-aed5-473f-a66e-eec126e0659d" />
+
 ~~~ sql
 SELECT
     type1,
@@ -99,7 +102,8 @@ GrOUP BY
     type1
 ~~~
 ### 문제 4
-![alt text](image-7.png)
+<img width="715" height="134" alt="image" src="https://github.com/user-attachments/assets/2e957ea3-eccf-4fc8-b014-5a21e4c1dbb8" />
+
 ~~~ sql
 SELECT
     is_legendary,
@@ -110,7 +114,8 @@ GROUP BY
     is_legendary
 ~~~
 ### 문제 5
-![alt text](image-8.png)
+<img width="888" height="166" alt="image" src="https://github.com/user-attachments/assets/29bb1bc8-af44-4109-a169-56ba6319a64b" />
+
 ~~~ sql
 SELECT
     name,
@@ -123,7 +128,8 @@ HAVING
     cnt > 1
 ~~~
 ### 문제 6
-![alt text](image-9.png)
+<img width="869" height="126" alt="image" src="https://github.com/user-attachments/assets/abedde3b-b91a-4cca-a88e-1832dfe9bf0c" />
+
 ~~~ sql
 SELECT
     *
@@ -133,7 +139,8 @@ WHERE
     name = 'iris'
 ~~~
 ### 문제 7
-![alt text](image-10.png)
+<img width="915" height="202" alt="image" src="https://github.com/user-attachments/assets/572b55a2-5a77-4bdb-9c28-3c2ddf6996f0" />
+
 
 ~~~ sql
 SELECT
@@ -196,9 +203,9 @@ FROM : 어디서 볼까? <br>
 ---
 
 # 2️⃣ 학습 인증란
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8ec8b30e-e6c5-4209-a87b-89fe56f581d2" />
 
-<<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8b17aab5-287e-468d-9486-bdd7e5c0bb0a" />
->
+
 
 
 <br><br>
