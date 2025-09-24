@@ -90,6 +90,7 @@ UNION : 여러 쿼리 블록의 결과를 하나의 결과 집합으로 결합.�
 UNION ALL : 여러 쿼리 블록의 결과를 하나의 결과 집합으로 결합.중복제거 안함  <br>
  <br>
  불가능 :
+
 ~~~sql
 SELECT 1 FOR UPDATE UNION SELECT 1 FOR UPDATE;
 ~~~
@@ -101,7 +102,7 @@ SELECT 1 FOR UPDATE UNION SELECT 1 FOR UPDATE;
 INTERSECT: 두 쿼리 블록 모두에 공통으로 존재하는 행만 반환, 중복 제거 <br>
 EXCEPT: 두 쿼리 블록 A, B에서 A에만 존재하고 B에는 없는 행 반환, 중복 제거<br>
 
-
+각 SELECT블록은 동일한 수의 컬럼 반환해야함.
 ## 2. 그룹함수
 
 ~~~
@@ -113,8 +114,33 @@ EXCEPT: 두 쿼리 블록 A, B에서 A에만 존재하고 B에는 없는 행 반
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
 
+COUNT(expr):	expr 값이 NULL이 아닌 행의 수를 반환 <br>
+COUNT(*): 전체 행의 수 (행마다 NULL 포함 상관없음)	<br>
+COUNT(DISTINCT expr [, …]) : 	중복되지 않는 (고유한) expr 값들의 개수<br>
+SUM(expr) :	expr 값의 합계<br>
+AVG(expr)	: expr 값의 평균 (average)	<br>
+MAX(expr)	:expr의 최대값<br>
+MIN(expr) :	expr의 최소값	<br>
+Group bY : 행들을 특정 컬럼 기준으로 그룹화한 뒤, 각 그룹별로 집계 함수를 적용할 때 사용
+~~~sql
+SELECT department, AVG(salary)
+FROM employees
+GROUP BY department;
+~~~
 
+HAVING : HAVING 절은 그룹화된 결과에 대한 조건 필터를 줄 때 사용 (즉, 그룹 단위 필터).
+WHERE :  절은 그룹화 이전의 개별 행 필터에 쓰이고, HAVING은 그룹 집계 결과에 대한 조건
+~~~sql
+SELECT department, COUNT(*) AS cnt, AVG(salary) AS avg_sal
+FROM employees
+GROUP BY department
+HAVING cnt > 5 AND avg_sal > 5000;
+~~~
 
+- 대부분의 집계 함수는 NULL 값을 무시 (skip) 한다. 즉, NULL인 값을 결과에 포함하지 않는다.
+- 만약 모든 값이 NULL이거나 그룹에 행이 없다면, SUM, AVG, MAX, MIN은 NULL을 반환한다.
+- COUNT(expr)은 expr이 NULL이 아닌 값의 수를 센다. 만약 expr이 모두 NULL이거나 행이 없으면 0을 반환한다.
+- COUNT(*)는 NULL 여부와 상관없이 행 수 전체를 센다 (NULL 포함 여부 무관).
 
 
 <br><br>
