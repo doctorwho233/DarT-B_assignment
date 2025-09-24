@@ -165,7 +165,8 @@ https://leetcode.com/problems/department-highest-salary/description/
 
 ## 문제 인증란
 
-<!-- 이 주석을 지우고 여기에 문제 푼 인증사진을 올려주세요. -->
+<img width="1907" height="886" alt="image" src="https://github.com/user-attachments/assets/17129c91-5928-4425-bd0f-9e29da1d1eb7" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b18a8496-6f05-484c-801c-343b4f103063" />
 
 
 
@@ -188,7 +189,20 @@ SELECT name FROM blackList;
 <br>
 
 ~~~
-여기에 답을 작성해주세요!
+중복 X
+~~~sql
+SELECT name FROM member
+UNION
+SELECT name FROM blackList;
+~~~
+중복 O
+~~~sql
+SELECT name FROM member
+UNION ALL
+SELECT name FROM blackList;
+~~~
+union : 중복 X
+union all : 중복 O
 ~~~
 
 ## 참고자료
