@@ -1,4 +1,4 @@
-<img width="193" height="170" alt="image" src="https://github.com/user-attachments/assets/fb130072-93e0-49d1-9c76-e8aaa983b48a" /># 통계학 4주차 정규과제
+# 통계학 4주차 정규과제
 
 📌통계학 정규과제는 매주 정해진 분량의 『*데이터 분석가가 반드시 알아야 할 모든 것*』 을 읽고 학습하는 것입니다. 이번 주는 아래의 **Statistics_4th_TIL**에 나열된 분량을 읽고 `학습 목표`에 맞게 공부하시면 됩니다.
 
