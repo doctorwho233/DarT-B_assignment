@@ -95,7 +95,12 @@ kurtosis() 로 첨도 <br><br>
 >
 > > **인증 예시 : 통계 프로그램 결과, 시각화 이미지 캡처 등**
 
-<!-- 이 주석을 지우고 “실습 결과 화면(캡처)을 이곳에 첨부해주세요.-->
+<img width="1920" height="1077" alt="image" src="https://github.com/user-attachments/assets/44f95fb9-d894-4e8b-93b2-1867706ae3a6" />
+<img width="1573" height="847" alt="image" src="https://github.com/user-attachments/assets/3e260374-bdd5-486a-8724-ca63ee7797fb" />
+<img width="1919" height="1067" alt="image" src="https://github.com/user-attachments/assets/12c5caed-ace3-441b-9cd3-29dce17b8362" />
+<img width="1718" height="982" alt="image" src="https://github.com/user-attachments/assets/2d2d33b9-1511-40bb-b6b0-6c9cca28b29b" />
+<img width="1901" height="1080" alt="image" src="https://github.com/user-attachments/assets/463103a3-a063-4e1c-a780-26cd1d54237c" />
+
 
 ~~~
 인증 이미지가 없으면 과제 수행으로 인정되지 않습니다.
