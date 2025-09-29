@@ -1,4 +1,4 @@
-# 통계학 4주차 정규과제
+<img width="193" height="170" alt="image" src="https://github.com/user-attachments/assets/fb130072-93e0-49d1-9c76-e8aaa983b48a" /># 통계학 4주차 정규과제
 
 📌통계학 정규과제는 매주 정해진 분량의 『*데이터 분석가가 반드시 알아야 할 모든 것*』 을 읽고 학습하는 것입니다. 이번 주는 아래의 **Statistics_4th_TIL**에 나열된 분량을 읽고 `학습 목표`에 맞게 공부하시면 됩니다.
 
@@ -54,9 +54,36 @@
 ```
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
+EDA : 탐색적 데이터 분석 -> 극단적 해석은 피하고 지나친 추론이나 자의적 해석 지양. <br>
+왜함? : 다양한 각도에서 데이터를 탐색 및 시각화해서 가치 있는 데이터로 정제하기 위함. <br>
+info() 로 전반적인거 확인 -> 결측값등 확인 <br>
+describe() 로 평균 표준편차 최대 최솟값등 확인 <br>
+skew() 로 왜도 <br>
+kurtosis() 로 첨도 <br><br>
 
-
-
+타깃 변수와 입력변수, 입력변수 간의 관계도 확인 必 <br>
+공분산 : 두 분산의 관계, 변수 각 값의 편차 와 변수 각 값의 편차를 곱한 값을 모두 더하구 n으로 나눔. <br>
+  0 : 상관관계 x  <br>
+  양수: 양의 상관관계 <br>
+  음수 : 음의 상관관계 <br>
+  
+  <img width="221" height="55" alt="image" src="https://github.com/user-attachments/assets/2391beec-330b-40a0-92b0-7c78c4d082fa" /><br>
+  피어슨 상관계수
+  <img width="193" height="170" alt="image" src="https://github.com/user-attachments/assets/9e30501a-aeb6-4b7a-83ef-302a10a1325f" />  <br><br>
+  시간 시각화
+  - 선 그래프 : 시간 간격 촘촘 + 추세선
+  - 추세선은 이동평균 법 자주 활용
+  - 누적 막대 그래프 : 한 시점에 2개 이상 세부항목 存
+비교 시각화
+- 히트맵 차트는 그룹과 비교요소가 많을 때
+- 방사형 차트<img width="684" height="789" alt="image" src="https://github.com/user-attachments/assets/62522b16-8f1d-4d84-9fbb-85fe326a4c96" />
+- 평행 좌표 그래프 : 비교 우위 확인 (변수별 값을 정규화 하면 좋음)
+<img width="678" height="256" alt="image" src="https://github.com/user-attachments/assets/20ba6af8-0702-4140-a283-5271cf185549" />
+분포 시각화
+- 질적 척도 간단 : 파이차트, 도넛차트
+- 질적 척도 복잡 : 트리맵 차트, 와플 차트
+- <img width="694" height="227" alt="image" src="https://github.com/user-attachments/assets/4f0004d7-521b-4b80-bdd2-a64dbefcf84f" />
+관계 시각화
 <br>
 <br>
 
