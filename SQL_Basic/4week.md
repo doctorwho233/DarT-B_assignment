@@ -1,4 +1,4 @@
-<img width="1917" height="1080" alt="image" src="https://github.com/user-attachments/assets/a51b6647-e506-4e46-b15f-ecf4f1a3c34f" /><img width="659" height="277" alt="image" src="https://github.com/user-attachments/assets/67de863c-6f5a-4d63-b42e-c6d2a417448b" /><img width="659" height="277" alt="image" src="https://github.com/user-attachments/assets/ad0f7654-74af-4d8e-9d9d-f68be77bdca0" /># SQL_BASIC 4주차 정규 과제 
+# SQL_BASIC 4주차 정규 과제 
 
 📌SQL_BASIC 정규과제는 매주 정해진 분량의 `초보자를 위한 BigQuery(SQL) 입문` 강의를 듣고 간단한 문제를 풀면서 학습하는 것입니다. 이번주는 아래의 **SQL_Basic_4th_TIL**에 나열된 분량을 수강하고 `학습 목표`에 맞게 공부하시면 됩니다.
 
