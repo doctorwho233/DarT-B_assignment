@@ -132,7 +132,10 @@ https://leetcode.com/problems/last-person-to-fit-in-the-bus/
 
 ## 문제 인증란
 
-<!-- 이 주석을 지우고 여기에 문제 푼 인증사진을 올려주세요. -->
+
+<img width="1920" height="949" alt="image" src="https://github.com/user-attachments/assets/5d0ea0a1-c1b5-4de6-9cc0-dd8147b53662" />
+<img width="1909" height="898" alt="image" src="https://github.com/user-attachments/assets/59cc7389-3302-4cf6-9fc9-ae94a879011b" />
+<img width="1901" height="891" alt="image" src="https://github.com/user-attachments/assets/5fdd8111-67ec-4600-ba58-eee8fd136dbb" />
 
 
 
@@ -153,7 +156,18 @@ FROM Orders;
 > **이번에는 예린이에게 "윈도우 함수를 쓰지 않고 동일한 결과를 만들어보라"는 미션을 받았습니다. 예린이는 이 작업을 어떻게 해야할지 막막합니다. 예린이를 도와 ROW_NUMBER() 윈도우 함수 없이 동일한 결과를 서브쿼리나 JOIN을 사용해서 작성해보세요.**
 
 ~~~
-여기에 답을 작성해주세요!
+SELECT o1.customer_id,
+       o1.order_id,
+       o1.order_date,
+       (
+         SELECT COUNT(*)
+         FROM Orders o2
+         WHERE o2.customer_id = o1.customer_id
+           AND o2.order_date <= o1.order_date
+       ) AS order_rank
+FROM Orders o1
+ORDER BY o1.customer_id, o1.order_date;
+
 ~~~
 
 
