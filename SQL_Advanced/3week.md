@@ -97,6 +97,8 @@
 윈도(Window): 현재 행을 기준으로 관련된 행들의 집합
 ~~~
 <img width="435" height="861" alt="image" src="https://github.com/user-attachments/assets/c284d03c-981e-4a74-96c0-71d7e4d7222a" />
+<img width="489" height="501" alt="image" src="https://github.com/user-attachments/assets/e06bf2dd-e59e-4eb4-a9bc-02614fb68faa" />
+<img width="469" height="798" alt="image" src="https://github.com/user-attachments/assets/ff84459e-fddb-44ae-8572-bfc2230820b1" />
 
 ---
 
