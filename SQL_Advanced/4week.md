@@ -73,7 +73,40 @@
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
 
+SELEcT 문은 한개 이상의 행 조회
+다른 연산자와 사용 가능
 
+<img width="653" height="388" alt="image" src="https://github.com/user-attachments/assets/b12799a7-8951-4b53-87bf-fc5a3006602f" />
+
+LIMIT
+
+반환할 행 수 제한.
+
+LIMIT 5 → 처음 5행
+LIMIT 5, 10 → 6번째부터 10개
+PostgreSQL 호환: LIMIT 10 OFFSET 5
+
+-- 단순 계산
+SELECT 1 + 1;
+-- 2
+
+-- DUAL 테이블 (더미 테이블) 사용
+SELECT 1 + 1 FROM DUAL;
+-- 2
+
+-- 컬럼 alias
+SELECT CONCAT(last_name, ', ', first_name) AS full_name
+FROM mytable ORDER BY full_name;
+
+-- GROUP BY + HAVING
+SELECT user, MAX(salary) 
+FROM users
+GROUP BY user
+HAVING MAX(salary) > 10;
+
+-- LIMIT 사용
+SELECT * FROM tbl LIMIT 5;        -- 처음 5행
+SELECT * FROM tbl LIMIT 5, 10;    -- 6행부터 10개
 
 <br>
 
