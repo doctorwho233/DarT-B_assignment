@@ -52,7 +52,7 @@
 
 # 4-4. 날짜 및 시간 데이터 이해하기(2) (EXTRACT, DATETIME_TRUNC, PARSE_DATETIME, FROMAT_DATETIME)
 
-~~~
+
 ✅ 학습 목표 :
 * 날짜 및 시간 데이터에 대해서 더 자세히 설명할 수 있다. 
 * CURRENT_TIME, EXTRACT, DATETIME_TRUNC, PARSE_DATETIME, FROMAT_DATETIME 을 설명할 수 있다. 
@@ -73,10 +73,10 @@ DATETIME_DIFF : 두 날짜간 차이 <br>
 
 # 4-6. 조건문(CASE WHEN, IF)
 
-~~~
+
 ✅ 학습 목표 :
 * 조건문 함수의 기능을 이해하고, 설명할 수 있다. 
-~~~
+
 
 CASE WHEN : 조건이 여러개일 떄 사용
 
