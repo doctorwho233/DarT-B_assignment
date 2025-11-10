@@ -186,7 +186,6 @@ UNION ALL
 
 
 ~~~
--- MySQL 8+, PostgreSQL, SQL Server, Oracle, SQLite 모두 가능
 SELECT region, restaurant_name, review_count
 FROM (
   SELECT
