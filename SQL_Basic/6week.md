@@ -84,10 +84,11 @@ JOIN : 서로 다른 데이터 테이블 연결 / 공통 칼럼이 있다면 JOI
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
 
-INNER JOIN: 두 테이블의 공통 요소
-LEFT/RIGHT (OUTER) JOIN: 왼쪽/오른쪽 테이블 기준
-FULL (OUTER) JOIN: 양쪽 기준
-CROSS JOIN: 두 테이블의 각각의 요소를 곱하기
+INNER JOIN: 두 테이블의 공통 요소 <br>
+LEFT/RIGHT (OUTER) JOIN: 왼쪽/오른쪽 테이블 기준 <br>
+FULL (OUTER) JOIN: 양쪽 기준 <br>
+CROSS JOIN: 두 테이블의 각각의 요소를 곱하기 <br>
+
 <img width="860" height="313" alt="image" src="https://github.com/user-attachments/assets/7dc720b8-daa3-4190-b9a0-b1b5e62617a0" />
 
 
@@ -101,7 +102,7 @@ CROSS JOIN: 두 테이블의 각각의 요소를 곱하기
 ~~~
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
-
+~~~
 SELECT
   A.col1,
   A.col2,
@@ -110,7 +111,7 @@ SELECT
 FROM table1 AS A
 LEFT JOIN table2 AS B
 ON A.key = B.key
-
+~~~
 
 ## 5-6. JOIN 연습문제 1~5번 
 
@@ -121,15 +122,15 @@ ON A.key = B.key
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
 1. 트레이너가 보유한 포켓몬들은 얼마나 있는지 알 수 있는 쿼리를 작성해 주세요.
-
+~~~
 SELECT
   COUNT(*) AS cnt
 FROM basic.trainer_pokemon
 WHERE
   status IN ("Active", "Training")
-  
+~~~  
 2. 각 트레이너가 가진 포켓몬 중에서 'Grass'타입의 포켓몬 수를 계산해 주세요.(단, 편의를 위해 type1 기준으로 계산해주세요)
-
+~~~
 SELECT
   P.TYPE1,
   COUNT(tp.id) AS pokemon_Cnt
@@ -150,9 +151,9 @@ WHERE
 GROUP BY
   type1
 ORDER BY 2 DESC
-
+~~~
 3. 트레이너의 고향(hometown)과 포켓몬을 포획한 위치(location)를 비교하여, 자신의 고향에서 포켓몬을 포획한 트레이너의 수를 계산해주세요.(참고 status 상관없이 구해주세요.)
-
+~~~
 SELECT
   COUNT(DISTINCT tp.trainer_id) AS trainer_uniq,
   COUNT(tp.trianer_id) AS trainer_cnt,
@@ -162,6 +163,7 @@ ON t.id = tp.trainer_id
 WHERE
   tp.location IS NOT NULL
   AND t.hometonw = tp.location
+~~~
 <br>
 
 <br>
