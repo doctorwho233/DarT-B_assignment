@@ -142,7 +142,9 @@ https://school.programmers.co.kr/learn/courses/30/lessons/133027
 ## 문제 인증란
 
 <!-- 이 주석을 지우고 여기에 문제 푼 인증사진을 올려주세요. -->
+<img width="686" height="653" alt="image" src="https://github.com/user-attachments/assets/77bf2b07-3ba5-4ff9-a244-5b9d9b20a263" />
 
+<img width="1918" height="971" alt="image" src="https://github.com/user-attachments/assets/ab21012a-069f-4c25-9f1f-85df7585c143" />
 
 
 ---
@@ -184,7 +186,20 @@ UNION ALL
 
 
 ~~~
-여기에 답을 작성해주세요!
+-- MySQL 8+, PostgreSQL, SQL Server, Oracle, SQLite 모두 가능
+SELECT region, restaurant_name, review_count
+FROM (
+  SELECT
+    r.*,
+    ROW_NUMBER() OVER (
+      PARTITION BY region
+      ORDER BY review_count DESC, restaurant_name ASC  -- 동률 시 이름으로 결정
+    ) AS rn
+  FROM Restaurants AS r
+) x
+WHERE x.rn <= 2
+ORDER BY region, review_count DESC, restaurant_name ASC;
+
 ~~~
 
 
