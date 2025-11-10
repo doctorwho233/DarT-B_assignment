@@ -88,48 +88,11 @@
 
 ### 11.4. 데이터 표준화와 정규화 스케일링
 
-**언제 필요한가?** 단위가 다른 변수가 혼재하거나 편차가 큰 경우, 특히 **거리 기반**(KNN, K-means)·**신경망**·**규제 회귀**에서 필수.
+표준화 : 평균 0, 표준편차 1 인 정규분포로 맞추는 것
 
-**표준화(Standardization)**
+정규화 : 범위를 0부터 1로 맞추는 것
 
-* 목표: 평균 **0**, 표준편차 **1**.
-* 변환: ( z = \frac{X-\mu}{\sigma} )
-
-**정규화(Normalization)**
-
-* 목표: 범위 **[0,1]**.
-* 변환: ( x' = \frac{x - x_{min}}{x_{max}-x_{min}} )
-
-**RobustScaler**
-
-* **중앙값(Q2)**, **IQR** 사용 → 이상치 영향 최소화.
-
-```python
-from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
-
-sc_std = StandardScaler()
-sc_minmax = MinMaxScaler()
-sc_robust = RobustScaler()
-
-X_std = sc_std.fit_transform(df[["x","y"]])
-X_minmax = sc_minmax.fit_transform(df[["x","y"]])
-X_robust = sc_robust.fit_transform(df[["x","y"]])
-```
-
-### 모델 성능 향상을 위한 파생 변수 생성
-
-**의의**
-
-* **도메인 지식**을 반영해 신호를 강화, 해석 가능성↑.
-* 예: 로그/제곱근 변환으로 분산 안정화, **전월 대비 증감률**, **사용자 활동 최근성(Recency)**, **비율/밀도** 변수 등.
-
-**예시 아이디어**
-
-* **집계형:** 사용자별 평균/최대/표준편차, 최근 N회 평균.
-* **변화율:** ((x_t - x_{t-1}) / |x_{t-1}|)
-* **상호작용:** (x_1 \times x_2), (x_1/x_2) (정규화 후 권장).
-* **시간 파생:** 요일, 시간대, 분기, 공휴일 더미.
-
+RobustScaler: 중앙값, IQR 사용해서 이상치 영향 최소화 시키는 것
 
 <br>
 <br>
@@ -144,7 +107,10 @@ X_robust = sc_robust.fit_transform(df[["x","y"]])
 >
 > > **인증 예시 : 통계 프로그램 결과, 시각화 이미지 캡처 등**
 
-<!-- 이 주석을 지우고 “실습 결과 화면(캡처)을 이곳에 첨부해주세요.-->
+<img width="1072" height="352" alt="image" src="https://github.com/user-attachments/assets/66f5679e-1173-45c4-98c4-d7e7d308f3bf" />
+<img width="1072" height="352" alt="image" src="https://github.com/user-attachments/assets/3c9ab4bc-a38c-499c-9e09-a5db1a75453a" />
+<img width="1072" height="352" alt="image" src="https://github.com/user-attachments/assets/651f6a71-aab6-44c5-b30c-53b587c51c40" />
+
 
 ~~~
 인증 이미지가 없으면 과제 수행으로 인정되지 않습니다.
