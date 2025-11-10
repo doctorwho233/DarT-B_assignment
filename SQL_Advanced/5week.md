@@ -81,8 +81,122 @@
 ~~~
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
+1. 계층형 질의 (WITH RECURSIVE)
+WITH RECURSIVE는 공통 테이블 표현식(CTE) 중 자기 자신을 참조하는 형태를 의미한다.
+즉, 하나의 임시 테이블(CTE)이 자신의 결과를 다시 참조하여 반복적으로 데이터를 확장한다.
+
+기본 구조 예시:
+
+WITH RECURSIVE cte (n) AS (
+  SELECT 1              -- 비재귀(시드) 부분
+  UNION ALL
+  SELECT n + 1 FROM cte -- 재귀 부분
+  WHERE n < 5
+)
+SELECT * FROM cte;
 
 
+결과
+
++---+
+| n |
++---+
+| 1 |
+| 2 |
+| 3 |
+| 4 |
+| 5 |
++---+
+🧩 구조와 규칙
+구분	설명
+비재귀(시드) SELECT	초기 데이터 생성. CTE를 참조하지 않음.
+재귀 SELECT	CTE 자신을 참조하여 이전 결과를 기반으로 다음 단계 생성.
+종료 조건	재귀 SELECT가 더 이상 새로운 행을 생성하지 못하면 자동 종료됨.
+형식 제약	자기참조 시 반드시 WITH RECURSIVE를 사용해야 함.
+
+⚙️ 재귀 CTE의 동작 방식
+
+UNION ALL 또는 UNION DISTINCT로 비재귀와 재귀 부분을 연결한다.
+
+각 반복(iteration)은 직전 단계에서 생성된 행만을 입력으로 사용한다.
+
+재귀 SELECT 내부에서는 다음을 사용할 수 없음:
+
+집계 함수 (SUM, AVG, …)
+
+윈도 함수
+
+GROUP BY, ORDER BY, DISTINCT
+
+(MySQL 8.0.19 이전) LIMIT
+
+
+⚠️ 주의 및 성능 팁
+항목	설명
+재귀 깊이 제한	cte_max_recursion_depth (기본 1000)으로 제어
+실행 시간 제한	max_execution_time 또는 MAX_EXECUTION_TIME 힌트 사용
+무한 루프 방지	종료 조건 명시, LIMIT 활용
+성능 최적화	메모리 임시 테이블 한도 증가 시 속도 개선 가능
+🔍 CTE vs 파생 테이블(Subquery)
+구분	CTE (WITH)	파생 테이블
+재사용 가능성	여러 번 참조 가능	1회만 사용 가능
+자기참조	가능 (재귀 CTE)	불가능
+가독성	높음 (쿼리 선두부 정의)	상대적으로 낮음
+생성 권한 필요 여부	불필요	CREATE TEMP TABLE 권한 필요할 수 있음
+
+
+✅ 학습 목표:
+
+WITH RECURSIVE 문법을 활용해 계층형 구조(조직도, 트리, 카테고리 등) 를 탐색할 수 있다.
+
+📘 개요
+
+WITH RECURSIVE는 공통 테이블 표현식(CTE) 중 자기 자신을 참조하여
+반복적으로 데이터를 생성하거나 누적 처리하는 문법이다.
+일반적으로 순차적 데이터 생성, 경로 탐색, 누적 합산, 그래프 탐색 등에 사용된다.
+
+🧩 기본 구조
+
+비재귀(시드) 부분: 최초 한 번만 실행되어 초기 데이터를 만든다.
+
+재귀 부분: 바로 이전 단계의 결과를 입력으로 받아, 조건이 만족될 때까지 반복 실행된다.
+
+두 부분은 UNION ALL 또는 UNION DISTINCT로 결합된다.
+
+⚙️ 주요 규칙
+구분	설명
+문법 키워드	자기참조가 포함된 경우 반드시 WITH RECURSIVE로 시작해야 한다.
+타입 결정	열 타입은 비재귀 부분 기준으로 결정되며, 모든 열은 NULL 허용으로 간주된다.
+UNION ALL / DISTINCT	UNION ALL은 중복 허용, UNION DISTINCT는 중복 제거로 무한 루프 방지 가능.
+반복 입력 원리	매 반복(iteration)은 직전 결과 집합을 입력으로 사용한다.
+⚠️ 문법 제약
+
+재귀 SELECT 내부에서는 다음 문법이 제한된다.
+
+집계 함수 (SUM, AVG, COUNT 등)
+
+윈도 함수
+
+GROUP BY, ORDER BY, DISTINCT
+
+(MySQL 8.0.18 이하) LIMIT 사용 불가
+
+LEFT JOIN의 오른쪽 피연산자로 CTE를 둘 수 없음
+
+FROM 절 내에서 CTE는 한 번만 참조 가능
+
+🔒 안전장치 및 제한
+항목	설명
+재귀 깊이 제한	cte_max_recursion_depth (기본값 1000)으로 제한 가능
+실행 시간 제한	max_execution_time 또는 옵티마이저 힌트 MAX_EXECUTION_TIME 사용 가능
+무한 루프 방지	종료 조건(WHERE) 및 LIMIT 절로 제어
+성능 관리	재귀 반복이 많으면 디스크 기반 임시 테이블로 전환될 수 있으므로 주의
+🧮 CTE와 파생 테이블의 비교
+구분	CTE (WITH)	파생 테이블(Subquery)
+참조 횟수	여러 번 참조 가능	1회만 사용 가능
+자기참조	가능 (WITH RECURSIVE)	불가능
+가독성	높음 (쿼리의 논리 구조가 선두에 위치)	낮음
+권한 필요 여부	명시적 생성/삭제 권한 불필요	임시 테이블 생성 시 권한 필요할 수 있음
 
 <br>
 
@@ -125,8 +239,11 @@
 ## 문제 인증란
 
 <!-- 이 주석을 지우고 여기에 문제 푼 인증사진을 올려주세요. -->
+<img width="697" height="627" alt="image" src="https://github.com/user-attachments/assets/8b368cf8-8ef0-4aa0-82a9-c9f953fe2a09" />
 
+<img width="704" height="674" alt="image" src="https://github.com/user-attachments/assets/3e7a9896-1787-479d-8421-1bbb5197792d" />
 
+<img width="926" height="594" alt="image" src="https://github.com/user-attachments/assets/f86116b4-df1a-4790-974c-88e70d2da63c" />
 
 ---
 
@@ -147,7 +264,39 @@ LEFT JOIN Employees e2 ON e1.manager_id = e2.id;
 
 
 ~~~
-여기에 답을 작성해주세요.
+-- MySQL 8+, PostgreSQL, SQL Server, SQLite
+WITH RECURSIVE org AS (
+  -- 시드: 최상위 관리자(manager_id IS NULL)
+  SELECT
+    e.id,
+    e.name,
+    e.manager_id,
+    0 AS depth,                               -- 루트 깊이 = 0 (원하면 1로 변경)
+    CAST(e.id AS CHAR(200)) AS path           -- (선택) 경로 누적용
+  FROM Employees e
+  WHERE e.manager_id IS NULL
+
+  UNION ALL
+
+  -- 재귀: 직속 부하들을 한 단계씩 확장
+  SELECT
+    c.id,
+    c.name,
+    c.manager_id,
+    p.depth + 1 AS depth,
+    CONCAT(p.path, '>', c.id) AS path
+  FROM Employees c
+  JOIN org p
+    ON c.manager_id = p.id
+)
+SELECT
+  id,
+  name,
+  manager_id,
+  depth
+FROM org
+ORDER BY depth DESC, id;
+
 ~~~
 
 
